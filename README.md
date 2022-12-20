@@ -72,6 +72,8 @@ project:
       section below.
 - Add the `ModelMapper` bean to the configuration file
   (i.e., `SpringProjectApplication`).
+  - Note: You will most likely need to add the `ModelMapper` dependency to the
+    `pom.xml`.
 - Add the database properties to the `application.properties` file to connect to
   the PostgreSQL database, `camp_db`.
 - Write the code for the repository classes to extend the `CrudRepository`
@@ -98,7 +100,8 @@ of concepts from the previous modules.
 The following requirements are requirements that you will implement throughout
 the course of this module:
 
-- Add logging to the project.
+- Make use of the logging framework and log to a file called
+  `spring-project.log`.
 - Add password encryption for when campers are logging into the camper portal.
 - Add authentication and authorization security features.
 - Add unit testing and integration testing to confirm everything is still
@@ -156,15 +159,6 @@ If the `Camper` is created successfully, send back a response with the new
 }
 ```
 
-If the `Camper` is **not** created successfully, return the following JSON data,
-along with the appropriate HTTP status code:
-
-```json
-{
-  "errors": ["validation errors"]
-}
-```
-
 #### GET /campers
 
 Return JSON data in the format below. **Note**: you should return a JSON
@@ -214,15 +208,6 @@ each camper.
 }
 ```
 
-If the `Camper` does not exist, return the following JSON data, along with the
-appropriate HTTP status code:
-
-```json
-{
-  "error": "Camper not found"
-}
-```
-
 ### POST /activity
 
 This route should create a new `Activity`. It should accept an object with the
@@ -265,7 +250,7 @@ Return JSON data in the format below:
 ]
 ```
 
-### DELETE /activities/{id}
+### DELETE /activity/{id}
 
 If the `Activity` exists, it should be removed from the database, along with any
 `Signup`s that are associated with it (a `Signup` belongs to an `Activity`, so
@@ -274,16 +259,7 @@ you need to delete the `Signup`s before the `Activity` can be deleted).
 After deleting the `Activity`, return an _empty_ response body, along with the
 appropriate HTTP status code.
 
-If the `Activity` does not exist, return the following JSON data, along with the
-appropriate HTTP status code:
-
-```json
-{
-  "error": "Activity not found"
-}
-```
-
-### POST /signups
+### POST /signup
 
 This route should create a new `Signup` that is associated with an existing
 `Camper` and `Activity`. It should accept an object with the following
@@ -303,17 +279,8 @@ related to the `Signup`:
 ```json
 {
   "id": 1,
+  "time": 9,
   "camper_id": 1,
-  "activity_id": 2,
-  "time": 9
-}
-```
-
-If the `Signup` is **not** created successfully, return the following JSON data,
-along with the appropriate HTTP status code:
-
-```json
-{
-  "errors": ["validation errors"]
+  "activity_id": 2
 }
 ```
