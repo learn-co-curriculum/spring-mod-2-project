@@ -12,26 +12,27 @@ Your task is to build the API according to the deliverables below.
 
 1. Go to [https://start.spring.io/](https://start.spring.io/).
 2. Select the project properties.
-3. Select "Maven Project", as we will use Maven as the build tool.
-4. Select "Java" as the language.
-5. Select the most recent version of Spring Boot 2. (Make sure it does not have
-   "SNAPSHOT" listed after it.)
-6. Change the "Artifact" metadata field to "spring-project". (This will update
-   the "Name" and "Package name" metadata fields too).
-7. Change the "Description" metadata field to "Spring Module Project".
-8. Select the appropriate Java JDK version.
-9. Add dependencies.
-10. Let's add the Spring Web dependency to create a Spring web application.
-11. Click "ADD DEPENDENCIES".
-12. Search for "spring web".
-13. Select "Spring Web" from the list.
-14. Click on "ADD DEPENDENCIES" again and add  "Lombok" from the list.
-15. Click on "ADD DEPENDENCIES" again and add "Spring Data JPA" from the list.
-16. Click on "ADD DEPENDENCIES" again and add "PostgreSQL Driver" from the list.
-17. Click on "ADD DEPENDENCIES" again and add "Validation" from the list.
-18. Click on the "Generate" button on the bottom. This will download a zip file
-    containing the Spring Boot Project.
-19. Unzip the archive and open it in IntelliJ or a preferred code editor.
+   1. Select "Maven Project", as we will use Maven as the build tool.
+   2. Select "Java" as the language.
+   3. Select the most recent version of Spring Boot 2. (Make sure it does not
+      have "SNAPSHOT" listed after it.)
+   4. Change the "Artifact" metadata field to "spring-project". (This will
+      update the "Name" and "Package name" metadata fields too).
+   5. Change the "Description" metadata field to "Spring Module Project".
+   6. Select the appropriate Java JDK version.
+3. Add dependencies.
+   1. Let's add the Spring Web dependency to create a Spring web application.
+   2. Click "ADD DEPENDENCIES".
+   3. Search for "spring web".
+   4. Select "Spring Web" from the list.
+   5. Click on "ADD DEPENDENCIES" again and add  "Lombok" from the list.
+   6. Click on "ADD DEPENDENCIES" again and add "Spring Data JPA" from the list.
+   7. Click on "ADD DEPENDENCIES" again and add "PostgreSQL Driver" from the
+      list.
+   8. Click on "ADD DEPENDENCIES" again and add "Validation" from the list.
+4. Click on the "Generate" button on the bottom. This will download a zip file
+   containing the Spring Boot Project.
+5. Unzip the archive and open it in IntelliJ or a preferred code editor.
 
 ![spring-project-initializr-configurations](https://curriculum-content.s3.amazonaws.com/spring-mod-2/project/spring-initializr-project.png)
 
@@ -102,8 +103,7 @@ the course of this module:
 
 - Make use of the logging framework and log to a file called
   `spring-project.log`.
-- Add password encryption for when campers are logging into the camper portal.
-- Add authentication and authorization security features.
+- Add Spring Security and basic authentication features.
 - Add unit testing and integration testing to confirm everything is still
   working as expected.
 
@@ -284,3 +284,15 @@ related to the `Signup`:
   "activity_id": 2
 }
 ```
+
+## Stretch Goals
+
+If time allows, and you want to try to implement some stretch goals, consider
+the following:
+
+- Add PUT requests to update a camper, activity, or signup.
+- Add TRACE-level log statements to the application.
+- Implement authentication with the campers' credentials.
+- Implement authorization so that the camper logged in can only access his or
+  her signups.
+123456789101112131415161718192021222324252627ac282930313233343536373839404041434
