@@ -104,8 +104,7 @@ the course of this module:
 - Make use of the logging framework and log to a file called
   `spring-project.log`.
 - Add Spring Security and basic authentication features.
-- Add unit testing and integration testing to confirm everything is still
-  working as expected.
+- Add unit testing to confirm everything is still working as expected.
 
 Only submit your project once you are fully finished making changes to it to
 your instructor.
@@ -295,4 +294,5 @@ the following:
 - Implement authentication with the campers' credentials.
 - Implement authorization so that the camper logged in can only access his or
   her signups.
-123456789101112131415161718192021222324252627ac282930313233343536373839404041434
+- Add integration tests to the controller classes and repository classes.
+- Add an acceptance test to test every endpoint in the application.
