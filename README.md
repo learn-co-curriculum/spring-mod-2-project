@@ -95,6 +95,10 @@ project:
   - It is recommended to write the code in iterations.
   - Consider the routes that need to be implemented and the example JSON files.
 
+> REMINDER: Commit your changes to Git every time you get a feature working!
+> This will create a clean git history and allow the instructors to see how
+> you approached this project.
+
 The above requirements are requirements you can start on now, as they make use
 of concepts from the previous modules.
 
