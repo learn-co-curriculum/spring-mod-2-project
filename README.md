@@ -66,10 +66,10 @@ project:
 
 - Create all the classes and interfaces to set up the project structure.
 - Write the code for the entity and DTO classes first.
-    - For example: Create the `Activity`, `Camper` and `Signup` entities and then
+  - For example: Create the `Activity`, `Camper` and `Signup` entities and then
       write their corresponding DTO classes.
-    - Consider the relationships based on the ER diagram above.
-    - Consider the validations that should be added to the DTO classes in the
+  - Consider the relationships based on the ER diagram above.
+  - Consider the validations that should be added to the DTO classes in the
       section below.
 - Add the `ModelMapper` bean to the configuration file
   (i.e., `SpringProjectApplication`).
