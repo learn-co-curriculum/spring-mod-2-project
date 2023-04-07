@@ -52,13 +52,13 @@ Start by creating the models for the following database tables:
 
 ![camper-er-diagram](https://curriculum-content.s3.amazonaws.com/spring-mod-2/project/camp-er-diagram.png)
 
-If you clone down this Git repository, you'll find the `data.sql` file that
+If you clone this Git repository, you'll find the `data.sql` file that
 contains the schema you can import into pgAdmin4.
 
 ## Project Requirements
 
 Create a Spring Boot API that models the campers signing up for activities.
-Make sure you consider the relationships, that are shown in the
+Make sure you consider the relationships that are shown in the
 entity-relationship (ER) diagram above.
 
 It is recommended to follow this outline of how to go about creating the
@@ -78,7 +78,12 @@ project:
 - Add the database properties to the `application.properties` file to connect to
   the PostgreSQL database, `camp_db`.
 - Write the code for the repository classes to extend the `CrudRepository`
-  interface.
+  interface or the `JpaRepository` interface.
+  - Note: The lessons we have seen thus far have gone over the `CrudRepository`
+    interface, but you can use the `JpaRepository` interface too as it provides
+    some more built-in methods. For more information on the `JpaRepository`
+    interface, please see
+    [JpaRepository Documentation](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html).
 - Write the code for the `ActivityService` and `ActivityController` classes.
   - It is recommended to do this in iterations.
     - For example, write the POST method to add a new activity to the database.
