@@ -142,7 +142,7 @@ lesson from Spring Module 1.
 Set up the following routes. Make sure to return JSON data in the format
 specified along with the appropriate HTTP verb.
 
-#### POST /campers
+#### POST /camper
 
 This route should create a new `Camper`. It should accept an object with the
 following properties in the body of the request:
@@ -188,7 +188,7 @@ camper.
 ]
 ```
 
-#### GET /campers/{id}
+#### GET /camper/{id}
 
 If the `Camper` exists, return JSON data in the format below.
 
